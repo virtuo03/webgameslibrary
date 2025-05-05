@@ -205,6 +205,7 @@ const games = {
 };
 
 // DOM Elements
+const favoritesGrid = document.getElementById('favorites-grid');
 const geographyGrid = document.getElementById('geography-grid');
 const generalGrid = document.getElementById('general-grid');
 const pokemonGrid = document.getElementById('pokemon-grid');
@@ -242,7 +243,12 @@ function initTheme() {
 function displayGames(gamesArray, container) {
     container.innerHTML = '';
     
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
     gamesArray.forEach(game => {
+        const gameCardWrapper = document.createElement('div');
+        gameCardWrapper.className = 'game-card-wrapper';
+        
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card';
         gameCard.setAttribute('data-category', game.category);
@@ -260,7 +266,18 @@ function displayGames(gamesArray, container) {
             </div>
         `;
         
-        container.appendChild(gameCard);
+        const favoriteStar = document.createElement('button');
+        favoriteStar.className = `game-card-star ${favorites.includes(game.id) ? 'favorited' : ''}`;
+        favoriteStar.innerHTML = '☆'; // Star icon
+        favoriteStar.dataset.gameId = game.id;
+        favoriteStar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleFavorite(game.id);
+        });
+        
+        gameCardWrapper.appendChild(favoriteStar);
+        gameCardWrapper.appendChild(gameCard);
+        container.appendChild(gameCardWrapper);
     });
     
     // Add event listeners to all play buttons
@@ -306,6 +323,7 @@ function searchGames(query) {
     generalGrid.innerHTML = '';
     pokemonGrid.innerHTML = '';
     mathGrid.innerHTML = '';
+    favoritesGrid.innerHTML = '';
     
     // Display results in a temporary container
     if (results.length > 0) {
@@ -340,8 +358,8 @@ function searchGames(query) {
 function init() {
     // Remove any search results sections
     const existingSearchResults = document.querySelectorAll('.game-section');
-    if (existingSearchResults.length > 4) { 
-        existingSearchResults[4].remove();
+    if (existingSearchResults.length > 5) { 
+        existingSearchResults[5].remove();
     }
     
     // Display games in their respective sections
@@ -349,6 +367,7 @@ function init() {
     displayGames(games.general, generalGrid);
     displayGames(games.pokemon, pokemonGrid);
     displayGames(games.math, mathGrid);
+    displayFavorites();
     
     // Set active nav link based on scroll position
     window.addEventListener('scroll', () => {
@@ -408,3 +427,45 @@ navLinks.forEach(link => {
         link.classList.add('active');
     });
 });
+
+function toggleFavorite(gameId) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const index = favorites.indexOf(gameId);
+    
+    if (index === -1) {
+        favorites.push(gameId);
+    } else {
+        favorites.splice(index, 1);
+    }
+    
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    updateFavoriteStars();
+    displayFavorites();
+}
+
+function updateFavoriteStars() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    document.querySelectorAll('.game-card-star').forEach(star => {
+        const gameId = parseInt(star.dataset.gameId);
+        const isFavorited = favorites.includes(gameId);
+        star.classList.toggle('favorited', isFavorited);
+        star.innerHTML = isFavorited ? '★' : '☆'; 
+    });
+}
+
+function displayFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoriteGames = [];
+    
+    // Find all games that are favorited
+    for (const category in games) {
+        games[category].forEach(game => {
+            if (favorites.includes(game.id)) {
+                favoriteGames.push(game);
+            }
+        });
+    }
+    
+    // Display them in the favorites grid
+    displayGames(favoriteGames, favoritesGrid);
+}

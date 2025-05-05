@@ -20,6 +20,7 @@
     --nav-hover: #660474;
     --nav-text: #2c3e50;
     --math-color: #e74c3c;
+    --favorites-color: #ffd700;
 }
 
 [data-theme="dark"] {
@@ -38,6 +39,7 @@
     --search-border: #444;
     --nav-hover: #9c27b0;
     --nav-text: #e0e0e0;
+    --favorites-color: #ffd700;
 }
 
 * {
@@ -58,6 +60,35 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Add to your CSS */
+.game-card-star {
+    position: absolute;
+    bottom: 150px;
+    right: 10px;
+    color: gold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.game-card-star:hover {
+    transform: scale(1.2);
+}
+
+.game-card-star.favorited {
+    color: gold;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    
+}
+
+.game-card-wrapper {
+    position: relative;
 }
 
 /* Header Styles */
@@ -251,6 +282,10 @@ nav ul li a:hover, nav ul li a.active {
 
 #pokemon .section-title::after {
     background-color: var(--pokemon-color);
+}
+
+#favorites .section-title::after {
+    background-color: var(--favorites-color);
 }
 
 .games-grid {
