@@ -92,12 +92,12 @@ const games = {
             url: "https://www.higherorlowergame.com/"
         },
         {
-            id: 15,
-            title: "Quordle",
-            description: "Guess four words at once in this challenging word guessing game.",
-            image: "imagesGames/quordle.png",
+            id: 18,
+            title: "FoodGuessr",
+            description: "Guess the origin of the food from the image and the ingredients.",
+            image: "imagesGames/foodguessr.png",
             category: "general",
-            url: "https://quordly.com/"
+            url: "https://www.foodguessr.com/"
         },
         {
             id: 16,
@@ -114,14 +114,6 @@ const games = {
             image: "imagesGames/rankdle.jpg",
             category: "general",
             url: "https://rankdle.com/games/valorant-guess-the-rank"
-        },
-        {
-            id: 18,
-            title: "FoodGuessr",
-            description: "Guess the origin of the food from the image and the ingredients.",
-            image: "imagesGames/foodguessr.png",
-            category: "general",
-            url: "https://www.foodguessr.com/"
         },
         {
             id: 19,
@@ -146,6 +138,30 @@ const games = {
             image: "imagesGames/catfishing.png",
             category: "general",
             url: "https://catfishing.net/"
+        },
+        {
+            id: 25,
+            title: "Housle",
+            description: "Guess the price of the house from the image.",
+            image: "imagesGames/housle.png",
+            category: "general",
+            url: "https://guessthe.house/"
+        },
+        {
+            id: 26,
+            title: "Moviedle",
+            description: "Guess the movie from the super speed version of the film.",
+            image: "imagesGames/moviedle.jpg",
+            category: "general",
+            url: "https://likewise.com/games/moviedle"
+        },
+        {
+            id: 15,
+            title: "Quordle",
+            description: "Guess four words at once in this challenging word guessing game.",
+            image: "imagesGames/quordle.png",
+            category: "general",
+            url: "https://quordly.com/"
         },
 
     ],
