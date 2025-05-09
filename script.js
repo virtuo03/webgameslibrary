@@ -48,7 +48,16 @@ const games = {
             image: "imagesGames/geogrid.webp",
             category: "geography",
             url: "https://www.geogridgame.com/"
-        }
+        },
+                {
+            id: 6,
+            title: "Travle",
+            description: "Guess the corret path between two countries",
+            image: "imagesGames/travle.png",
+            category: "geography",
+            url: "https://travle.earth/"
+        },
+
     ],
     general: [
         {
