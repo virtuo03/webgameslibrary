@@ -50,7 +50,7 @@ const games = {
             url: "https://www.geogridgame.com/"
         },
                 {
-            id: 6,
+            id: 28,
             title: "Travle",
             description: "Guess the corret path between two countries",
             image: "imagesGames/travle.png",
