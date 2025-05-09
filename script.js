@@ -156,6 +156,14 @@ const games = {
             url: "https://likewise.com/games/moviedle"
         },
         {
+            id: 26,
+            title: "Framed",
+            description: "Guess the movie from the frame.",
+            image: "imagesGames/framed.png",
+            category: "general",
+            url: "https://framed.wtf/"
+        },
+        {
             id: 17,
             title: "Rankdle",
             description: "Guess the rank from the video.",
