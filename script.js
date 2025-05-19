@@ -138,7 +138,7 @@ const games = {
             description: "Guess the country from the trade data.",
             image: "imagesGames/tradle.webp",
             category: "general",
-            url: "https://tradle.net/"
+            url: "https://games.oec.world/en/tradle/"
         },
         {
             id: 23,
