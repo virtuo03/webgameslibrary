@@ -529,6 +529,28 @@ footer {
     background-color: rgba(0, 0, 0, 0.2);
     font-size: 0.9rem;
 }
+.donate-button {
+    background-color: #0070ba;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.donate-button:hover {
+    background-color: #005ea6;
+    transform: translateY(-2px);
+}
+
+/* Adjust the footer content grid to accommodate the new section */
+.footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
