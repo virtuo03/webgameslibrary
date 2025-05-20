@@ -49,8 +49,8 @@ const games = {
             category: "geography",
             url: "https://www.geogridgame.com/"
         },
-                {
-            id: 28,
+        {
+            id: 7,
             title: "Travle",
             description: "Guess the corret path between two countries",
             image: "imagesGames/travle.png",
@@ -61,7 +61,7 @@ const games = {
     ],
     general: [
         {
-            id: 7,
+            id: 8,
             title: "Wordle",
             description: "The popular daily word guessing game where you have six tries to guess a five-letter word.",
             image: "imagesGames/wordle.webp",
@@ -69,7 +69,7 @@ const games = {
             url: "https://www.nytimes.com/games/wordle/index.html"
         },
         {
-            id: 21,
+            id: 9,
             title: "Connections",
             description: "A word association game where you connect words to form groups of four.",
             image: "imagesGames/connections.webp",
@@ -77,7 +77,7 @@ const games = {
             url: "https://www.nytimes.com/games/connections"
         },
         {
-            id: 8,
+            id: 10,
             title: "Gamedle",
             description: "Guess the video game from blurred screenshots that become clearer with each guess.",
             image: "imagesGames/gamedle.webp",
@@ -101,7 +101,7 @@ const games = {
             url: "https://www.higherorlowergame.com/"
         },
         {
-            id: 18,
+            id: 13,
             title: "FoodGuessr",
             description: "Guess the origin of the food from the image and the ingredients.",
             image: "imagesGames/foodguessr.png",
@@ -109,7 +109,7 @@ const games = {
             url: "https://www.foodguessr.com/"
         },
         {
-            id: 16,
+            id: 14,
             title: "Guess the age",
             description: "Guess the age of the person in the image",
             image: "imagesGames/ageguessr.jpg",
@@ -117,7 +117,7 @@ const games = {
             url: "https://guesstheage.org/play"
         },
         {
-            id: 27,
+            id: 15,
             title: "Auction Game",
             description: "Guess the price of the art item from the image.",
             image: "imagesGames/auctiongame.png",
@@ -125,7 +125,7 @@ const games = {
             url: "https://neal.fun/auction-game/"
         },
         {
-            id: 19,
+            id: 16,
             title: "Bandle (careful copyright)",
             description: "Guess the band's song from the instrumental music.",
             image: "imagesGames/bandle.png",
@@ -133,7 +133,7 @@ const games = {
             url: "https://bandle.app/"
         },
         {
-            id: 22,
+            id: 17,
             title: "Tradle",
             description: "Guess the country from the trade data.",
             image: "imagesGames/tradle.webp",
@@ -141,7 +141,7 @@ const games = {
             url: "https://games.oec.world/en/tradle/"
         },
         {
-            id: 23,
+            id: 18,
             title: "Catfishing",
             description: "Guess the Wikipedia article from its categories.",
             image: "imagesGames/catfishing.png",
@@ -149,7 +149,7 @@ const games = {
             url: "https://catfishing.net/"
         },
         {
-            id: 25,
+            id: 19,
             title: "Housle",
             description: "Guess the price of the house from the image.",
             image: "imagesGames/housle.png",
@@ -157,7 +157,7 @@ const games = {
             url: "https://guessthe.house/"
         },
         {
-            id: 26,
+            id: 20,
             title: "Moviedle",
             description: "Guess the movie from the super speed version of the film.",
             image: "imagesGames/moviedle.jpg",
@@ -165,7 +165,7 @@ const games = {
             url: "https://likewise.com/games/moviedle"
         },
         {
-            id: 26,
+            id: 21,
             title: "Framed",
             description: "Guess the movie from the frame.",
             image: "imagesGames/framed.png",
@@ -173,7 +173,7 @@ const games = {
             url: "https://framed.wtf/"
         },
         {
-            id: 17,
+            id: 22,
             title: "Rankdle",
             description: "Guess the rank from the video.",
             image: "imagesGames/rankdle.jpg",
@@ -181,7 +181,7 @@ const games = {
             url: "https://rankdle.com/games/valorant-guess-the-rank"
         },
         {
-            id: 15,
+            id: 23,
             title: "Quordle",
             description: "Guess four words at once in this challenging word guessing game.",
             image: "imagesGames/quordle.png",
@@ -192,7 +192,7 @@ const games = {
     ],
     pokemon: [
         {
-            id: 9,
+            id: 24,
             title: "Pokedle",
             description: "Guess the Pokémon from its silhouette in this daily Pokémon guessing game.",
             image: "imagesGames/pokedle.webp",
@@ -200,17 +200,34 @@ const games = {
             url: "https://pokedle.net/"
         },
         {
-            id: 10,
+            id: 25,
             title: "Pokedoku",
             description: "A Pokémon-themed grid game combining elements of Sudoku and trivia.",
             image: "imagesGames/pokedoku.png",
             category: "pokemon",
             url: "https://pokedoku.com/"
-        }
-    ],
-    math : [
+        },
         {
-            id: 20,
+            id: 26,
+            title: "Dextrio",
+            description: "Guess the Pokémon!",
+            image: "imagesGames/dextrio.jpg",
+            category: "pokemon",
+            url: "https://dextrio.app/"
+        },
+        {
+            id: 33,
+            title: "Pokedle 2",
+            description: "Like Wordle, but with Pokémon! Guess the Pokémon in 6 tries.",
+            image: "imagesGames/pokedle2.png",
+            category: "pokemon",
+            url: "https://pokedle.app/en",
+        }
+
+    ],
+    math: [
+        {
+            id: 27,
             title: "Nerdle",
             description: "A math-based word game where you guess the equation instead of a word.",
             image: "imagesGames/nerdle.png",
@@ -218,7 +235,7 @@ const games = {
             url: "https://nerdlegame.com/"
         },
         {
-            id: 14,
+            id: 28,
             title: "Angle",
             description: "Guess the angle of the line in this daily angle guessing game.",
             image: "imagesGames/angle.svg",
@@ -226,7 +243,7 @@ const games = {
             url: "https://angle.wtf/"
         },
         {
-            id: 13,
+            id: 29,
             title: "Higher or Lower: original Edition",
             description: "Guess if the next item is higher or lower in popularity based on Google search data",
             image: "imagesGames/higherorloweroriginal.png",
@@ -234,7 +251,7 @@ const games = {
             url: "https://www.higherlowergame.com/"
         },
         {
-            id: 24,
+            id: 30,
             title: "Matiks",
             description: "A math game where you solve equations to progress through levels.",
             image: "imagesGames/matiks.png",
@@ -242,6 +259,32 @@ const games = {
             url: "https://www.matiks.in/"
         },
 
+    ],
+    streamer: [
+        {
+            id: 31,
+            title: "Skribbl.io",
+            description: "Multiplayer drawing and guessing game where chat can join the fun.",
+            image: "imagesGames/skribble.png",
+            category: "streamer",
+            url: "https://skribbl.io/"
+        },
+        {
+            id: 32,
+            title: "Gartic Phone",
+            description: "Telephone game meets drawing - hilarious results perfect for streaming.",
+            image: "imagesGames/garticphone.jpg",
+            category: "streamer",
+            url: "https://garticphone.com/"
+        },
+        {
+            id: 32,
+            title: "Codenames",
+            description: "A word association game where players try to guess the words based on clues given by their teammates.",
+            image: "imagesGames/codenames.webp",
+            category: "streamer",
+            url: "https://codenames.game/room/create"
+        },
     ]
 };
 
@@ -272,7 +315,7 @@ function toggleTheme() {
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme) {
         setTheme(savedTheme);
     } else {
@@ -283,18 +326,18 @@ function initTheme() {
 // Display games function
 function displayGames(gamesArray, container) {
     container.innerHTML = '';
-    
+
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    
+
     gamesArray.forEach(game => {
         const gameCardWrapper = document.createElement('div');
         gameCardWrapper.className = 'game-card-wrapper';
-        
+
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card';
         gameCard.setAttribute('data-category', game.category);
         gameCard.setAttribute('data-title', game.title.toLowerCase());
-        
+
         gameCard.innerHTML = `
             <img src="${game.image}" alt="${game.title}" class="game-card-img">
             <div class="game-card-content">
@@ -315,12 +358,12 @@ function displayGames(gamesArray, container) {
             e.stopPropagation();
             toggleFavorite(game.id);
         });
-        
+
         gameCardWrapper.appendChild(favoriteStar);
         gameCardWrapper.appendChild(gameCard);
         container.appendChild(gameCardWrapper);
     });
-    
+
     // Add event listeners to all play buttons
     document.querySelectorAll('.game-card-btn').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -328,7 +371,7 @@ function displayGames(gamesArray, container) {
             window.open(button.dataset.url, '_blank');
         });
     });
-    
+
     // Add event listeners to game cards
     document.querySelectorAll('.game-card').forEach(card => {
         card.addEventListener('click', () => {
@@ -345,27 +388,27 @@ function searchGames(query) {
         init();
         return;
     }
-    
+
     const searchTerm = query.toLowerCase();
     const results = [];
-    
+
     // Search through all categories
     for (const category in games) {
         games[category].forEach(game => {
-            if (game.title.toLowerCase().includes(searchTerm) || 
+            if (game.title.toLowerCase().includes(searchTerm) ||
                 game.description.toLowerCase().includes(searchTerm)) {
                 results.push(game);
             }
         });
     }
-    
+
     // Clear all grids
     geographyGrid.innerHTML = '';
     generalGrid.innerHTML = '';
     pokemonGrid.innerHTML = '';
     mathGrid.innerHTML = '';
     favoritesGrid.innerHTML = '';
-    
+
     // Display results in a temporary container
     if (results.length > 0) {
         const searchResultsSection = document.createElement('div');
@@ -376,10 +419,10 @@ function searchGames(query) {
                 <div class="games-grid" id="search-results-grid"></div>
             </div>
         `;
-        
+
         // Insert after hero section
         document.querySelector('main').insertBefore(searchResultsSection, document.querySelector('.game-section'));
-        
+
         // Display results
         displayGames(results, document.getElementById('search-results-grid'));
     } else {
@@ -399,30 +442,31 @@ function searchGames(query) {
 function init() {
     // Remove any search results sections
     const existingSearchResults = document.querySelectorAll('.game-section');
-    if (existingSearchResults.length > 5) { 
-        existingSearchResults[5].remove();
+    if (existingSearchResults.length > 6) {
+        existingSearchResults[6].remove();
     }
-    
+
     // Display games in their respective sections
     displayGames(games.geography, geographyGrid);
     displayGames(games.general, generalGrid);
     displayGames(games.pokemon, pokemonGrid);
     displayGames(games.math, mathGrid);
     displayFavorites();
-    
+    displayGames(games.streamer, document.getElementById('streamer-grid'));
+
     // Set active nav link based on scroll position
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         document.querySelectorAll('.game-section').forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
+
             if (pageYOffset >= (sectionTop - 100)) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -457,12 +501,12 @@ navLinks.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         window.scrollTo({
             top: targetSection.offsetTop - 80,
             behavior: 'smooth'
         });
-        
+
         // Update active class
         navLinks.forEach(navLink => navLink.classList.remove('active'));
         link.classList.add('active');
@@ -472,13 +516,13 @@ navLinks.forEach(link => {
 function toggleFavorite(gameId) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const index = favorites.indexOf(gameId);
-    
+
     if (index === -1) {
         favorites.push(gameId);
     } else {
         favorites.splice(index, 1);
     }
-    
+
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateFavoriteStars();
     displayFavorites();
@@ -490,14 +534,14 @@ function updateFavoriteStars() {
         const gameId = parseInt(star.dataset.gameId);
         const isFavorited = favorites.includes(gameId);
         star.classList.toggle('favorited', isFavorited);
-        star.innerHTML = isFavorited ? '★' : '☆'; 
+        star.innerHTML = isFavorited ? '★' : '☆';
     });
 }
 
 function displayFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const favoriteGames = [];
-    
+
     // Find all games that are favorited
     for (const category in games) {
         games[category].forEach(game => {
@@ -506,7 +550,7 @@ function displayFavorites() {
             }
         });
     }
-    
+
     // Display them in the favorites grid
     displayGames(favoriteGames, favoritesGrid);
 }

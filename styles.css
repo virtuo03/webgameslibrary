@@ -21,6 +21,7 @@
     --nav-text: #2c3e50;
     --math-color: #e74c3c;
     --favorites-color: #ffd700;
+    --streamer-color: #9147ff;
 }
 
 [data-theme="dark"] {
@@ -84,7 +85,7 @@ body {
 .game-card-star.favorited {
     color: gold;
     text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
-    
+
 }
 
 .game-card-wrapper {
@@ -136,11 +137,58 @@ nav ul li a {
     transition: all 0.3s;
     padding: 5px 10px;
     border-radius: 5px;
+
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: white;
+nav ul li a:hover,
+nav ul li a.active {
     background-color: var(--nav-hover);
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.nav-icon:hover img,
+.nav-icon.active img {
+    transform: scale(1.1);
+}
+
+.nav-icon.active {
+    background-color: var(--nav-hover);
+}
+
+/* Tooltip styles for accessibility */
+.nav-icon {
+    position: relative;
+}
+
+.nav-icon:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
 }
 
 .search-container {
@@ -288,6 +336,10 @@ nav ul li a:hover, nav ul li a.active {
     background-color: var(--favorites-color);
 }
 
+#streamer .section-title::after {
+    background-color: var(--streamer-color);
+}
+
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -321,6 +373,11 @@ nav ul li a:hover, nav ul li a.active {
 .game-card[data-category="pokemon"] {
     border-color: var(--pokemon-color);
 }
+
+.game-card[data-category="streamer"] {
+    border-color: var(--streamer-color);
+}
+
 
 .game-card-img {
     width: 100%;
@@ -377,6 +434,7 @@ nav ul li a:hover, nav ul li a.active {
 .game-card[data-category="pokemon"] .game-card-category {
     background-color: var(--pokemon-color);
 }
+
 .game-card[data-category="math"] {
     border-color: var(--math-color);
 }
@@ -384,6 +442,7 @@ nav ul li a:hover, nav ul li a.active {
 .game-card[data-category="math"] .game-card-category {
     background-color: var(--math-color);
 }
+
 #math .section-title::after {
     background-color: var(--math-color);
 }
@@ -477,31 +536,31 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     nav ul {
         margin-top: 20px;
     }
-    
+
     nav ul li {
         margin: 0 10px;
     }
-    
+
     .search-container {
         margin-left: 0;
         width: 100%;
         justify-content: center;
     }
-    
+
     .theme-toggle {
         position: absolute;
         top: 20px;
         right: 20px;
     }
-    
+
     .hero h2 {
         font-size: 2.2rem;
     }
-    
+
     .games-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -512,11 +571,11 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .hero h2 {
         font-size: 1.8rem;
     }
-    
+
     .games-grid {
         grid-template-columns: 1fr;
     }
