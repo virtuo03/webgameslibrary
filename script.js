@@ -285,6 +285,14 @@ const games = {
             category: "streamer",
             url: "https://codenames.game/room/create"
         },
+        {
+            id: 34,
+            title: "Bomb Party",
+            description: "A fast-paced word game where players must come up with words that fit a given category and start with a specific letter.",
+            image: "imagesGames/bombparty.png",
+            category: "streamer",
+            url: "https://jklm.fun/"
+        },
     ]
 };
 
