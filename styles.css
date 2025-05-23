@@ -462,6 +462,66 @@ nav ul li a.active {
     background-color: var(--dark-color);
 }
 
+/* Random Game Section Styles */
+.random-game-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.random-game-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.random-game-card:hover {
+    transform: translateY(-5px);
+}
+
+.random-game-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.random-game-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.random-game-content h3 {
+    margin: 0 0 10px;
+    color: var(--text-color);
+}
+
+.random-game-content p {
+    margin: 0 0 15px;
+    color: var(--text-secondary);
+}
+
+.random-game-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.random-game-btn:hover {
+    background-color: var(--accent-hover);
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--footer-bg);

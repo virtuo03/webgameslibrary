@@ -450,8 +450,8 @@ function searchGames(query) {
 function init() {
     // Remove any search results sections
     const existingSearchResults = document.querySelectorAll('.game-section');
-    if (existingSearchResults.length > 6) {
-        existingSearchResults[6].remove();
+    if (existingSearchResults.length > 7) {
+        existingSearchResults[7].remove();
     }
 
     // Display games in their respective sections
@@ -461,6 +461,7 @@ function init() {
     displayGames(games.math, mathGrid);
     displayFavorites();
     displayGames(games.streamer, document.getElementById('streamer-grid'));
+    setupRandomGame();
 
     // Set active nav link based on scroll position
     window.addEventListener('scroll', () => {
@@ -561,4 +562,43 @@ function displayFavorites() {
 
     // Display them in the favorites grid
     displayGames(favoriteGames, favoritesGrid);
+}
+
+// Random game functionality
+function setupRandomGame() {
+    const randomCard = document.getElementById('random-game-card');
+    const randomButton = randomCard.querySelector('.random-game-btn');
+    
+    // Combine all games from all categories
+    const allGames = [];
+    for (const category in games) {
+        allGames.push(...games[category]);
+    }
+
+    function openRandomGame() {
+        if (allGames.length === 0) return;
+        
+        const randomIndex = Math.floor(Math.random() * allGames.length);
+        const randomGame = allGames[randomIndex];
+        
+        // Ensure the URL is valid before opening
+        if (randomGame.url && randomGame.url.startsWith('http')) {
+            window.open(randomGame.url, '_blank');
+        } else {
+            console.error('Invalid URL for game:', randomGame);
+            // Fallback to a default game if the URL is invalid
+            window.open('https://www.geoguessr.com/', '_blank');
+        }
+    }
+
+    randomCard.addEventListener('click', (e) => {
+        // Don't trigger if clicking the button directly
+        if (e.target === randomButton) return;
+        openRandomGame();
+    });
+
+    randomButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openRandomGame();
+    });
 }
