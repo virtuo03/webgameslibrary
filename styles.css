@@ -178,7 +178,7 @@ nav ul li a.active {
 }
 
 .nav-icon:hover::after {
-    content: attr(aria-label);
+    
     position: absolute;
     bottom: -30px;
     left: 50%;
