@@ -581,18 +581,14 @@ function setupRandomGame() {
         const randomIndex = Math.floor(Math.random() * allGames.length);
         const randomGame = allGames[randomIndex];
         
-        // Ensure the URL is valid before opening
         if (randomGame.url && randomGame.url.startsWith('http')) {
             window.open(randomGame.url, '_blank');
         } else {
-            console.error('Invalid URL for game:', randomGame);
-            // Fallback to a default game if the URL is invalid
             window.open('https://www.geoguessr.com/', '_blank');
         }
     }
 
     randomCard.addEventListener('click', (e) => {
-        // Don't trigger if clicking the button directly
         if (e.target === randomButton) return;
         openRandomGame();
     });
@@ -600,5 +596,13 @@ function setupRandomGame() {
     randomButton.addEventListener('click', (e) => {
         e.stopPropagation();
         openRandomGame();
+    });
+
+    // Reset GIF animation when mouse leaves
+    randomCard.addEventListener('mouseleave', () => {
+        const diceGif = randomCard.querySelector('.dice-gif');
+        // Clone and replace to reset GIF
+        const newGif = diceGif.cloneNode(true);
+        diceGif.parentNode.replaceChild(newGif, diceGif);
     });
 }

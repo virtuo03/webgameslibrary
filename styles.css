@@ -463,6 +463,7 @@ nav ul li a.active {
 }
 
 /* Random Game Section Styles */
+/* Random Game Section - GIF Version */
 .random-game-container {
     width: 100%;
     margin: 20px 0;
@@ -484,13 +485,35 @@ nav ul li a.active {
     transform: translateY(-5px);
 }
 
-.random-game-img {
+.dice-animation-container {
+    position: relative;
     width: 150px;
     height: 150px;
-    object-fit: contain;
-    padding: 20px;
     background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 20px;
+}
+
+.dice-static,
+.dice-gif {
+    width: 80px;
+    height: 80px;
+    transition: opacity 0.3s ease;
+}
+
+.dice-gif {
+    position: absolute;
+    opacity: 0;
+}
+
+.random-game-card:hover .dice-static {
+    opacity: 0;
+}
+
+.random-game-card:hover .dice-gif {
+    opacity: 1;
 }
 
 .random-game-content {
@@ -521,7 +544,6 @@ nav ul li a.active {
 .random-game-btn:hover {
     background-color: var(--accent-hover);
 }
-
 /* Footer Styles */
 footer {
     background-color: var(--footer-bg);
