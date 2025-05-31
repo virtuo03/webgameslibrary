@@ -293,6 +293,14 @@ const games = {
             category: "streamer",
             url: "https://jklm.fun/"
         },
+                {
+            id: 34,
+            title: "OpenGuessr",
+            description: "A multiplayer geography game where players guess locations based on images, similar to GeoGuessr.",
+            image: "imagesGames/openguessr.avif",
+            category: "streamer",
+            url: "https://openguessr.com/multiplayer"
+        },
     ]
 };
 
