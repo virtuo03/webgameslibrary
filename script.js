@@ -133,6 +133,24 @@ const games = {
             url: "https://bandle.app/"
         },
         {
+            id: 36,
+            title: "CIRCLE",
+            description: "CIRCLE",
+            image: "imagesGames/perfect-circle.svg",
+            category: "general",
+            url: "https://neal.fun/perfect-circle/"
+
+
+        },
+        {
+            id: 37,
+            title: "NEAL.FUN",
+            description: "GOATED SITE",
+            image: "imagesGames/neal.png",
+            category: "general",
+            url: "https://neal.fun/"
+        },
+        {
             id: 17,
             title: "Tradle",
             description: "Guess the country from the trade data.",
@@ -293,8 +311,8 @@ const games = {
             category: "streamer",
             url: "https://jklm.fun/"
         },
-                {
-            id: 34,
+        {
+            id: 35,
             title: "OpenGuessr",
             description: "A multiplayer geography game where players guess locations based on images, similar to GeoGuessr.",
             image: "imagesGames/openguessr.avif",
@@ -365,7 +383,7 @@ function displayGames(gamesArray, container) {
                 </div>
             </div>
         `;
-        
+
         const favoriteStar = document.createElement('button');
         favoriteStar.className = `game-card-star ${favorites.includes(game.id) ? 'favorited' : ''}`;
         favoriteStar.innerHTML = '☆'; // Star icon
@@ -576,7 +594,7 @@ function displayFavorites() {
 function setupRandomGame() {
     const randomCard = document.getElementById('random-game-card');
     const randomButton = randomCard.querySelector('.random-game-btn');
-    
+
     // Combine all games from all categories
     const allGames = [];
     for (const category in games) {
@@ -585,10 +603,10 @@ function setupRandomGame() {
 
     function openRandomGame() {
         if (allGames.length === 0) return;
-        
+
         const randomIndex = Math.floor(Math.random() * allGames.length);
         const randomGame = allGames[randomIndex];
-        
+
         if (randomGame.url && randomGame.url.startsWith('http')) {
             window.open(randomGame.url, '_blank');
         } else {
