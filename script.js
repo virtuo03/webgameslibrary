@@ -206,6 +206,15 @@ const games = {
             category: "general",
             url: "https://quordly.com/"
         },
+        {
+            id : 38,
+            title: "Syllacrostic",
+            description: "daily word puzzle that challenges your vocabulary and critical thinking skills",
+            image: "imagesGames/syllacrostic.png",
+            category: "general",
+            url: "https://syllacrostic.com/daily"
+        }
+
 
     ],
     pokemon: [
