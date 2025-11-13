@@ -213,6 +213,14 @@ const games = {
             image: "imagesGames/syllacrostic.png",
             category: "general",
             url: "https://syllacrostic.com/daily"
+        },
+        {
+            id : 39,
+            title: "Linkedin or Interpol",
+            description: "Guess if the profile is from Linkedin or Interpol",
+            image: "imagesGames/linkedin.webp",
+            category: "general",
+            url: "https://linkedin-or-interpol.com/"
         }
 
 
